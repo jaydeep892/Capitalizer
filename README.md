@@ -14,6 +14,7 @@ You can install the package via Composer:
 ```bash
 composer require jacmac/string-uppercase
 
+```
 ## Usage
 
 Use the facade to convert any string to uppercase:
@@ -23,8 +24,34 @@ use Jacmac\StringUppercase\Facades\Uppercase;
 
 Uppercase::make('hello world'); // returns "HELLO WORLD"
 
+```
+
 If you're using Laravel's auto-discovery, you can even skip the 'use' statement:
 
 ```bash
 Uppercase::make('laravel rules'); // returns "LARAVEL RULES"
 
+```
+## Auto-Discovery
+
+This package supports Laravel auto-discovery. No manual registration required.
+
+## Example Route
+
+```bash
+Route::get('/uppercase/{text}', function ($text) {
+    return Uppercase::make($text);
+});
+
+```
+Visit:
+/uppercase/hello → will return HELLO
+
+## Configuration
+
+No configuration required. Just plug and play 🎉
+
+## Licence
+
+The MIT License (MIT).
+Please see the LICENSE file for more information.
