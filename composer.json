@@ -13,6 +13,9 @@
         "providers": [
             "JacMac\\StringUppercase\\StringUppercaseServiceProvider"
             ]
+        },
+        "aliases": {
+        "Uppercase": "Jacmac\\StringUppercase\\Facades\\Uppercase"
         }
     }
 }
